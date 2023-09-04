@@ -24,30 +24,48 @@ public class Task8 {
 
         int number = scanner.nextInt();
 
-        if (number >= 100 && number <= 999) {
+        boolean containsZero = containsDigit(number, 0);
 
-            // Extract individual digits
-            int digit1 = number / 100;
-            int digit2 = (number / 10) % 10;
-            int digit3 = number % 10;
-
-            boolean isDivisibleByAllDigits = (number % digit1 == 0) && (number % digit2 == 0) && (number % digit3 == 0);
-
-            if (isDivisibleByAllDigits) {
-                System.out.println("The number is divisible by all its digits.");
-            } else {
-                System.out.println("The number is not divisible by all its digits.");
-            }
-
-            scanner.close();
-
+        if (containsZero) {
+            System.out.println("The number cannot contain 0.");
         } else {
-            System.out.println("Please enter a valid three-digit number without the digit 0 ");
-        }
-    }
+            if (number >= 100 && number <= 999) {
 
-    // Part of Scenario 1 Helper function to check if a number is a three-digit number without the digit 0
+                // Extract individual digits
+                int digit1 = number / 100;
+                int digit2 = (number / 10) % 10;
+                int digit3 = number % 10;
+
+                boolean isDivisibleByAllDigits = (number % digit1 == 0) && (number % digit2 == 0) && (number % digit3 == 0);
+
+                if (isDivisibleByAllDigits) {
+                    System.out.println("The number is divisible by all its digits.");
+                } else {
+                    System.out.println("The number is not divisible by all its digits.");
+                }
+
+                scanner.close();
+
+            } else {
+                System.out.println("Please enter a valid three-digit number without the digit 0 ");
+            }
+        }
+
+        // Part of Scenario 1 Helper function to check if a number is a three-digit number without the digit 0
 //    private static boolean isValidNumber(int num) {
 //        return num >= 100 && num <= 999 && num % 10 != 0 && (num / 10) % 10 != 0;
 //    }
+    }
+
+    private static boolean containsDigit(int num, int digit) {
+        while (num != 0) {
+            int currentDigit = num % 10;
+            if (currentDigit == digit) {
+                return true;
+            }
+            num /= 10;
+        }
+        return false;
+    }
 }
+

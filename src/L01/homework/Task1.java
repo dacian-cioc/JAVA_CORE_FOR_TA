@@ -20,10 +20,16 @@ public class Task1 {
         System.out.print("Enter number C: ");
         double C = scanner.nextDouble();
 
-        if (C >= A && C <= B) {
+        if (C > A && C < B) {
             System.out.println("Number " + C + " is between " + A + " and " + B);
         } else {
             System.out.println("Number " + C + " is not between " + A + " and " + B);
+        }
+
+        if (C > B && C < A) {
+            System.out.println("Number " + C + " is between " + B + " and " + A);
+        } else {
+            System.out.println("Number " + C + " is not between " + B + " and " + A);
         }
 
         scanner.close();

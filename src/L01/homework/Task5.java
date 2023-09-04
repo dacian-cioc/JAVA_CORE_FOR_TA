@@ -17,27 +17,33 @@ public class Task5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the time (0 for night, 1 for day): ");
+        System.out.print("Enter the time (between 0 and 24): ");
         int time = scanner.nextInt();
 
         System.out.print("Enter the amount of money: ");
         double money = scanner.nextDouble();
 
-        System.out.print("Am I at work? (true/false): ");
+        System.out.print("Are you at work? (true/false): ");
         boolean isAtWork = scanner.nextBoolean();
 
-        if (isAtWork) {
-            System.out.println("I'm at work and can't go out.");
-        } else if (time == 1 && money > 10) {
-            System.out.println("It's a day, and I have more than $10, so I will go to the cinema.");
-        } else if (time == 1 && (money < 10 || money <= 0)) {
-            System.out.println("It's a day, and I have less than $10 or no money, so I will go for a walk.");
-        } else if (time == 0 && money > 20) {
-            System.out.println("It's night, and I have more than $20, so I will go to a disco.");
-        } else if (time == 0) {
-            System.out.println("It's night, and I have less than $20, so I will go to sleep.");
+        if (time >= 0 && time <= 24) {
+            if (isAtWork) {
+                System.out.println("I'm at work and will be working; can't go out.");
+            } else if (time >= 6 && time < 18) { // It's daytime (6 AM to 6 PM)
+                if (money > 10) {
+                    System.out.println("It's a day, and I have more than $10, so I'll go to the cinema.");
+                } else {
+                    System.out.println("It's a day, and I have less than $10 or no money, so I'll go for a walk.");
+                }
+            } else { // It's nighttime
+                if (money > 20) {
+                    System.out.println("It's night, and I have more than $20, so I'll go to a disco.");
+                } else {
+                    System.out.println("It's night, and I have less than $20, so I'll go to sleep.");
+                }
+            }
         } else {
-            System.out.println("Invalid input.");
+            System.out.println("Invalid time input. Please enter a time between 0 and 24.");
         }
 
         scanner.close();
