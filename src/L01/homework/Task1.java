@@ -22,14 +22,10 @@ public class Task1 {
 
         if (C > A && C < B) {
             System.out.println("Number " + C + " is between " + A + " and " + B);
-        } else {
-            System.out.println("Number " + C + " is not between " + A + " and " + B);
-        }
-
-        if (C > B && C < A) {
+        } else if (C > B && C < A) {
             System.out.println("Number " + C + " is between " + B + " and " + A);
         } else {
-            System.out.println("Number " + C + " is not between " + B + " and " + A);
+            System.out.println("Number " + C + " is not between " + Math.min(A, B) + " and " + Math.max(A, B));
         }
 
         scanner.close();
