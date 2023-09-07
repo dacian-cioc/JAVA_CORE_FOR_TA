@@ -11,7 +11,7 @@ public class Task12 {
 
         System.out.println("Three-digit numbers with distinct digits:");
 
-        for (int number = 100; number <= 999; number++) {
+        for (int number = 102; number <= 987; number++) {
             if (hasDistinctDigits(number)) {
                 System.out.println(number);
             }

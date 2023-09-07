@@ -41,13 +41,15 @@ public class Task16 {
 
     // Helper function to check if a number is a palindrome
     private static boolean isPalindrome(int number) {
-        String str = Integer.toString(number);
-        int length = str.length();
-        for (int i = 0; i < length / 2; i++) {
-            if (str.charAt(i) != str.charAt(length - i - 1)) {
-                return false;
-            }
+        int originalNumber = number;
+        int reversedNumber = 0;
+
+        while (number > 0) {
+            int digit = number % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            number /= 10;
         }
-        return true;
+
+        return originalNumber == reversedNumber;
     }
 }
