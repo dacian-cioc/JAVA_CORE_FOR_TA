@@ -20,7 +20,7 @@ public class Task6 {
         String input2 = scanner.nextLine();
         int[] array2 = convertInputToArray(input2);
 
-        // Compare the arrays
+        // Compare the arrays using Arrays.equals
         boolean areEqual = Arrays.equals(array1, array2);
 
         // Display the result
