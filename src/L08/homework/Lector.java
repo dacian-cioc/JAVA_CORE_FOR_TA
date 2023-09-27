@@ -38,6 +38,7 @@ public class Lector extends Person {
         super.showPersonInfo(); // Reuse the parent class method
         System.out.println(getFirstName() + " " + getLastName() + " " +  "- Daily Salary: $" + dailySalary);
 
+
     }
 
     // Method to calculate overtime payment for experienced lecturers

@@ -1,3 +1,12 @@
+//Implement the Demo class which contains a main method and do the following:
+//Initialize an array with 10 elements of type Person.
+//Create 3 objects of each type (Person, Student, Lector) and insert them into the
+//array of people.
+//Iterate through the array and depending on the type of object, call the correct
+//method for it (showPersonInfo(), showStudentInfo() or showLectorInfo())
+//Iterate through the array one more time, this time displaying for all lectors (you
+//should have only 3) the amount owed to them for 4 hours of overtime work.
+
 package L08.homework;
 
 public class Demo {
@@ -7,7 +16,7 @@ public class Demo {
         // Create and insert objects of different types into the array
         people[0] = new Person("Person John", "Doe", 35, "Male");
         people[1] = new Student("Student Alice", "Smith", 20, "Female", 95.5);
-        people[2] = new Lector("Lector David", "Johnson", 40, "Male", 200.0);
+        people[2] = new Lector("Lector David", "Johnson", 25, "Male", 200.0);
         people[3] = new Person("Person Emily", "Williams", 28, "Female");
         people[4] = new Student("Student James", "Brown", 22, "Male", 88.0);
         people[5] = new Lector("Lector Mary", "Davis", 45, "Female", 250.0);

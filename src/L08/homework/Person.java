@@ -29,12 +29,13 @@ public class Person {
 
     // Method to display person information
     public void showPersonInfo() {
+//        System.out.println("---------------------------------");
         System.out.println("Person Information:");
         System.out.println("First Name: " + firstName);
         System.out.println("Last Name: " + lastName);
         System.out.println("Age: " + age);
         System.out.println("Gender: " + gender);
-        System.out.println("----------------------------");
+        System.out.println("---------------------------------");
     }
     public int getAge() {
         return age; // Return the age field
