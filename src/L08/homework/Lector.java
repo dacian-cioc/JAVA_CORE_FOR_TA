@@ -25,6 +25,11 @@
 package L08.homework;
 
 public class Lector extends Person {
+    // Constant for working hours per day
+    private static final int WORKING_DAY_IN_HOURS = 8;
+
+    // Constant for the minimum age of an experienced lecturer
+    private static final int EXPERIENCED_LECTOR_MIN_AGE = 30;
     private double dailySalary;
 
     // Constructor for initializing lector fields
@@ -43,9 +48,9 @@ public class Lector extends Person {
 
     // Method to calculate overtime payment for experienced lecturers
     public double calculateOvertime(double hours) {
-        if (getAge() > 30) {
+        if (getAge() > EXPERIENCED_LECTOR_MIN_AGE) {
             // Experienced lecturers receive overtime payment
-            return (dailySalary / 8) * hours * 2; // Assuming 8 hours per working day
+            return (dailySalary / WORKING_DAY_IN_HOURS) * hours * 2; // Assuming 8 hours per working day
         }
         return 0.0; // Not eligible for overtime
     }

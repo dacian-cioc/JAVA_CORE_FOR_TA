@@ -13,6 +13,7 @@ public class Demo {
     public static void main(String[] args) {
         Person[] people = new Person[9];
 
+
         // Create and insert objects of different types into the array
         people[0] = new Person("Person John", "Doe", 35, "Male");
         people[1] = new Student("Student Alice", "Smith", 20, "Female", 95.5);
@@ -31,11 +32,9 @@ public class Demo {
             } else if (person instanceof Lector) {
                 ((Lector) person).showLectorInfo();
                 // Calculate and display overtime for lectors
-                if (person.getAge() > 30) {
                     double overtimeAmount = ((Lector) person).calculateOvertime(4.0);
                     System.out.println("Overtime for " + person.getFirstName() + " " + person.getLastName() + "(4 hours): $" + overtimeAmount);
                     System.out.println("------------------------------");
-                }
             } else {
                 person.showPersonInfo();
             }
