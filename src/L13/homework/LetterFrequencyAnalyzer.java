@@ -1,3 +1,11 @@
+//Write a program which displays a list of the most common letters in text entered
+//by the user. The program to output statistical information about the frequency
+//of occurrence of the letters, not distinguishing between uppercase and
+//lowercase letters. The letters should be arranged according to the frequency of
+//occurrence in the text. On each line, write the letter, the number of occurrences,
+//as well as a graph to illustrate the percentage of occurrences (using the "#"
+//symbol).
+
 package L13.homework;
 
 import java.util.HashMap;

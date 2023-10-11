@@ -1,3 +1,11 @@
+//Write a program which creates ArrayList with 20 random numbers between 0
+//and 5000.
+//• The user enters a random number, the program must say if the
+//list contains that number. If yes, show the index, otherwise
+//show appropriate message.
+//• Find min and max number in the list.
+//• Show all the elements of the list.
+
 package L13.homework;
 
 import java.util.ArrayList;
